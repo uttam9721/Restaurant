@@ -1,0 +1,26 @@
+.footer {
+    color:#9d9d9d;
+    background-color: #323232;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 80vw;
+    padding: 80px;
+
+}
+.footer-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 80px;
+}
+.footer-content-left, .footer-content-center, .footer-content-right {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+.footer-content-left img{
+    width: 350px;
+    height: 80px;
+}
