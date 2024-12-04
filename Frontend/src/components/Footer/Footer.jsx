@@ -35,7 +35,10 @@ const Footer = () => {
                 </ul>
             </div>
         </div>
+        <br />
+        <br />
         <hr />
+        <br />
         <p className="footer-copyright-text">
             @ Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium placeat veniam est perspiciatis reiciendis, hic autem! Mollitia dignissimos magnam eum.
         </p>

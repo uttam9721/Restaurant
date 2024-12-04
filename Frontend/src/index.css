@@ -5,11 +5,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: outfit;
+  scroll-behavior: smooth;
 }
 body{
   min-height: 100vh;
-  /* background: #243642; */
-  /* color: #FEFAE0; */
 }
 a{
   text-decoration: none;

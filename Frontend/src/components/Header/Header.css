@@ -4,6 +4,7 @@
     background: url('./header_img.png') no-repeat;
     background-size: contain;
     position: relative;
+    margin-top: 100px;
 }
 .header-contents {
     position: absolute;
@@ -31,4 +32,33 @@
      border-radius: 50px;
      cursor: pointer;
      transition: 0.3s;
+}
+@media (max-width: 1050px) {
+    .header{
+        height: 38vw;
+    }
+    .header-contents{
+        min-width: 60%;
+        margin-bottom: 30px;
+
+    }
+    .header-contents h2{
+        font-weight: 500;
+        color: #fff;
+        font-size: max(3.5vw,20px);
+    }
+}
+@media (max-width: 750px) {
+    .header-contents{
+        min-width: 65%;
+        /* margin-bottom: 30px; */
+    }
+    .header-contents p{
+       display: none;
+    }
+    .header-contents bottom{
+        padding: 2vw 4vw;
+
+
+    }
 }
