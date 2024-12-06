@@ -1,4 +1,4 @@
-.login-popup {
+/* .login-popup {
     position: absolute;
     z-index: 1;
     width: 100%;
@@ -19,5 +19,95 @@
     border-radius: 8px;
     font-size: 14px;
     animation: fadeIn 0.5s;
+    margin-top: 20px !important;
   }
-  
+.login-popup-title img{
+  width: 10px;
+  cursor: pointer;
+}
+.login-popup-title{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  color: #333;
+
+}
+.login-popup-inputs{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+} */
+
+/* General Container */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Authentication Box */
+.auth-box {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 350px;
+}
+
+/* Title */
+.auth-box h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+/* Input Fields */
+.auth-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Button */
+.auth-button {
+  width: 100%;
+  padding: 10px;
+  background: #2575fc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.auth-button:hover {
+  background: #0056d2;
+}
+
+/* Footer Text */
+.auth-footer {
+  margin-top: 15px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Link */
+.auth-link {
+  color: #2575fc;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.auth-link:hover {
+  color: #0056d2;
+}
