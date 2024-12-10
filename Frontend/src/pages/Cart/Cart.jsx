@@ -1,12 +1,13 @@
 import React, { useContext } from 'react'
 import './Cart.css'
 import { StoreContext } from '../../context/StoreContext';
-import { food_list } from '../../assets/assets';
+import { assets, food_list } from '../../assets/assets';
 const Card = () => {
 
-  const { cartItem, food_list, removeFromCart } = useContext(StoreContext);
+  const { cartItems, food_list, removeFromCart } = useContext(StoreContext);
 
   return (
+
     <div className='cart'>
       <div className="cart-items">
         <div className="cart-items-title">
@@ -20,13 +21,23 @@ const Card = () => {
         <br />
         <hr />
         {food_list.map((item,index)=>{
-          // if(cartItem[item._id]>0)
+          if(cartItems[item._id]>0)
          {
           return(
-            <div className='cart-item-title-cart-items-item'>
-              <p>{item.name}</p>
+            <>
+            <div className='cart-items-title cart-items-item'>
+             <img src={item.image} alt="img" />
+             <p>{item.name}</p>
+             <p>₹ 1{item.price}</p>
+             <p>{cartItems[item._id]}</p>
+             <p>{cartItems[item._id]*item.price}</p>
+             <img className='cross' onClick={()=>removeFromCart(item._id)} src={assets.cross_icon} alt="cross" />
+             {/* <img className='cross' onClick={()=>removeFromCart(item._id)} src={assets.cross_icon} alt="cross" /> */}
+             
+             
             </div>
-  
+            <hr />
+            </>
             )
          }
         })}
