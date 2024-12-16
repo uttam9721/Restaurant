@@ -32,9 +32,6 @@ const Card = () => {
              <p>{cartItems[item._id]}</p>
              <p>{cartItems[item._id]*item.price}</p>
              <img className='cross' onClick={()=>removeFromCart(item._id)} src={assets.cross_icon} alt="cross" />
-            
-             
-             
             </div>
             <hr />
             </>
@@ -42,8 +39,23 @@ const Card = () => {
          }
         })}
       </div>
-
-      
+      <div className="cart-botton">
+        <h2>Cart Total</h2>
+        <div>
+          <div className="cart-total-details">
+            <p>Subtotal</p>
+          </div>
+          <div className="cart-total-details">
+            <p>Delivery Fee</p>
+            <p>{2}</p>
+          </div>
+          <div className="cart-total-details">
+            <b>Total</b>
+            <b>{0}</b>
+          </div>
+        </div>
+          <button>Proceed To Checkout</button>
+      </div>
     </div>
   )
 }
