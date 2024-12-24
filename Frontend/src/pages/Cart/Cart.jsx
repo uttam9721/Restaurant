@@ -50,12 +50,12 @@ const Card = () => {
       <hr />
       <div className="cart-total-details">
         <p>Delivery Fee</p>
-        <p>₹ { 30}</p>
+        <p>₹ {getTotalCartAmount()===0?"0":50}</p>
       </div>
       <hr />
       <div className="cart-total-details">
         <b>Total</b>
-        <b>₹ {getTotalCartAmount()+30}</b>
+        <b>₹ {getTotalCartAmount()===0?"0":getTotalCartAmount()+30}</b>
       </div>
     </div>
     <button>PROCEED TO CHECKOUT</button>
