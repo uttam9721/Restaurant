@@ -17,9 +17,10 @@ app.use(cors())
 // connectDB()
 connectDB()
 
-// api
 
+// api
 app.use('/api/food',foodRouter)
+app.use("/images".express.static('uploads'))
 
 
 
