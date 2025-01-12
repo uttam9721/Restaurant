@@ -1,19 +1,31 @@
-import express from 'express'
-import { addFood } from '../controllers/foodControllers.js'
-import multer from 'multer'
+
+import express from 'express';
+import { addFood,listFood,removeFood } from '../controllers/foodControllers.js';
+import multer from 'multer';
 
 const foodRouter = express.Router();
 
-// image storage ;
+// Image storage configuration
 const Storage = multer.diskStorage({
-    destination:"upload",
-    filename:(req,file,cb)=>{
-        return cb(null,`$({Date.now()}${file.originalname})`)
-    }
-})
-const upload = multer({storage:Storage})
+    destination: (req, file, cb) => {
+        cb(null, 'uploads'); // Correct folder name ('uploads') should match your static directory setup
+    },
+    filename: (req, file, cb) => {
+        cb(null, `${Date.now()}_${file.originalname}`); // Correct template literal syntax
+    },
+});
 
-foodRouter.post('/add',upload.single("image") ,addFood);
+// Multer upload configuration
+const upload = multer({ storage: Storage });
+
+// Route to handle file upload and add food
+foodRouter.post('/add', upload.single('image'), addFood);
+
+// get all food
+foodRouter.get('/list',listFood);
+
+// remove food 
+foodRouter.post('/remove',removeFood)
 
 
 export default foodRouter;
