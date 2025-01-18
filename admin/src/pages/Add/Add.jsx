@@ -37,7 +37,7 @@ const Add = () => {
             })
             setImage(false);
         }else{
-            alert("Failed to add food");
+            alert("Failed to add Food");
         }
 
     }
