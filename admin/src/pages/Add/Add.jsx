@@ -34,6 +34,7 @@ const Add = () => {
                 description:"",
                 price:"",
                 category:"salad"
+                // category:"salad"
             })
             setImage(false);
         }else{
