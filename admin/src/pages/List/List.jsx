@@ -110,6 +110,7 @@ const List = () => {
       <div className="list-table">
         <div className="list-table-format title">
           <b>Image</b>
+          {/* <b>Image</b> */}
           <b>Name</b>
           <b>Category</b>
           <b>Price</b>
