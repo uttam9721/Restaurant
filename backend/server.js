@@ -18,7 +18,7 @@ const port = 4000;
 app.use(express.json());
 app.use(cors());
 app.use('/images', express.static(path.join(__dirname, 'uploads'))); // Static file serving
-app.use("api/user",userRouter)
+app.use("/api/user",userRouter)
 
 // Connect to the database
 connectDB(); // Ensure your DB connection is correctly set up
