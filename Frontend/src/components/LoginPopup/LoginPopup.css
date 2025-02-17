@@ -38,8 +38,7 @@
   gap: 20px;
 } */
 
-/* General Container */
-.auth-container {
+/* .auth-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,7 +48,6 @@
   margin: 0;
 }
 
-/* Authentication Box */
 .auth-box {
   background: white;
   padding: 30px 40px;
@@ -59,14 +57,12 @@
   width: 350px;
 }
 
-/* Title */
 .auth-box h2 {
   margin-bottom: 20px;
   color: #333;
   font-size: 24px;
 }
 
-/* Input Fields */
 .auth-input {
   width: 100%;
   padding: 10px;
@@ -76,7 +72,6 @@
   font-size: 16px;
 }
 
-/* Button */
 .auth-button {
   width: 100%;
   padding: 10px;
@@ -93,14 +88,12 @@
   background: #0056d2;
 }
 
-/* Footer Text */
 .auth-footer {
   margin-top: 15px;
   color: #666;
   font-size: 14px;
 }
 
-/* Link */
 .auth-link {
   color: #2575fc;
   cursor: pointer;
@@ -110,4 +103,80 @@
 
 .auth-link:hover {
   color: #0056d2;
+} */
+
+
+/* other */
+.login-popup{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #00000090;
+  display: grid;
+}
+
+.login-popup-container{
+  place-self: center;
+  width: max(23vw,330px);
+  color: #808080;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px 30px;
+  border-radius: 8px;
+  font-size: 14px;
+  animation: fadeIn 0.5s;
+}
+
+.login-popup-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+}
+
+.login-popup-title img{
+  width: 16px;
+  cursor: pointer;
+}
+
+.login-popup-inputs{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-popup-inputs input{
+  outline: none;
+  border: 1px solid #c9c9c9;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.login-popup-container button{
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  color: white;
+  background-color: tomato;
+  cursor: pointer;
+}
+
+.login-popup-condition{
+  display: flex;
+  align-items: start;
+  gap: 8px;
+  margin-top: -15px;
+}
+
+.login-popup-condition input{
+  margin-top: 5px;
+}
+
+.login-popup p span{
+  color: tomato;
+  font-weight: 500;
+  cursor: pointer;
 }

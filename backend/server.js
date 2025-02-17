@@ -7,6 +7,7 @@ import { fileURLToPath } from 'url'; // Handle __dirname in ES modules
 import userRouter from './routes/userRoute.js';
 import 'dotenv/config'
 import cartRouter from './routes/cartRoute.js';
+import orderRouter from './routes/orderRoute.js';
 // Handle __dirname in ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -18,14 +19,13 @@ const port = 4000;
 // Middleware
 app.use(express.json());
 app.use(cors());
+app.use('/api/food', foodRouter);
 app.use('/images', express.static(path.join(__dirname, 'uploads'))); // Static file serving
 app.use("/api/user",userRouter)
 app.use("/api/cart",cartRouter)
+app.use("/api/order",orderRouter)
 // Connect to the database
 connectDB(); // Ensure your DB connection is correctly set up
-
-// API routes
-app.use('/api/food', foodRouter);
 
 
 // Root route
