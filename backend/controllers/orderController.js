@@ -15,6 +15,7 @@ const placeOrder = async (req, res) =>{
             amount:req.body.amount,
             address: req.body.address
         })
+        // })
 
         await newOrder.save();
         await userModel.findByIdAndUpdate(req.body.userId,{cartData:{}});
