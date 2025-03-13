@@ -30,7 +30,7 @@ const Card = () => {
             <div className='cart-items-title cart-items-item'>
              <img src={url+"/images/"+item.image} alt="img" />
              <p>{item.name}</p>
-             <p>₹ 1{item.price}</p>
+             <p>₹{item.price}</p>
              <p>{cartItems[item._id]}</p>
              <p>{cartItems[item._id]*item.price}</p>
              <img className='cross' onClick={()=>removeFromCart(item._id)} src={assets.cross_icon} alt="cross" />
@@ -52,7 +52,7 @@ const Card = () => {
       <hr />
       <div className="cart-total-details">
         <p>Delivery Fee</p>
-        <p>₹ {getTotalCartAmount()===0?"0":50}</p>
+        <p>₹ {getTotalCartAmount()===0?"0":30}</p>
       </div>
       <hr />
       <div className="cart-total-details">
