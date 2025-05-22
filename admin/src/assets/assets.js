@@ -17,4 +17,4 @@ export const assets = {
 };
 
 // Export the API base URL
-export const url = 'https://backend-1yrx.onrender.com';
+export const url = 'http://localhost:5173';
