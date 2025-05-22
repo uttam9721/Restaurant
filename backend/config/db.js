@@ -5,5 +5,6 @@ export const connectDB = async()=>{
     .then(()=>{
         console.log('mongodb is connected...')
     }).catch(err =>console.log("err"));
+    // }).catch(err =>console.log("err"));
     
 }
