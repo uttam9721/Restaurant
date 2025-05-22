@@ -10,6 +10,7 @@ const StoreContextProvider = (props) => {
   const [food_list, setFoodList] = useState([]); // Initialize as an empty array
 
   // Add to Cart
+  // Add to Cart
   const addToCart = async (itemId) => {
     setCartItems((prev) => ({
       ...prev,
