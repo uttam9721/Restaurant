@@ -14,7 +14,11 @@ const __dirname = path.dirname(__filename);
 
 // App config
 const app = express();
+<<<<<<< HEAD
 const port = 4000;
+=======
+const port =4000;
+>>>>>>> 6e1652760662bb01daa22f3d2292d93f152b3cbe
 
 // Middleware
 app.use(express.json());
