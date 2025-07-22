@@ -7,7 +7,7 @@ const FoodDisplay = ({ category }) => {
     const { food_list } = useContext(StoreContext);
 
     if (!food_list) {
-        return <div>Loading...</div>; // Handle the case where food_list is undefined
+        return <div>Loading...</div>;
     }
 
     return (
